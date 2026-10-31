@@ -1,0 +1,151 @@
+<html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
+  <meta name="description" content="Conheça os produtos da Tabacaria do Alemão.">
+  <title>Tabacaria do Alemão</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer=""></script>
+</head>
+<body>
+  <header class="topo">
+    <a href="#" class="logo">TABACARIA <span>DO ALEMÃO</span></a>
+    <button class="botao-carrinho" id="abrir-carrinho" aria-label="Abrir carrinho">
+      🛒 <span id="contador">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="banner">
+      <div class="banner-conteudo">
+        <span class="etiqueta">BEM-VINDO À NOSSA LOJA</span>
+        <h1>SEU ESTILO.<br><span>SUA ESCOLHA.</span></h1>
+        <p>Confira nossos produtos e encontre seus favoritos.</p>
+        <a href="#produtos" class="botao-dourado">VER PRODUTOS</a>
+      </div>
+    </section>
+
+    <section class="catalogo" id="produtos">
+      <div class="titulo-secao">
+        <span>CONFIRA NOSSO CATÁLOGO</span>
+        <h2>Nossos produtos</h2>
+      </div>
+      <div class="grade-produtos" id="grade-produtos">
+    
+        <article class="produto">
+
+    <img src="./imagem/51 ice limão.jpg"
+         alt="51 Ice Limão"
+         loading="lazy">
+    <div class="produto-info">
+        <h3>51 Ice Limão</h3>
+        <p>Bebida - confirme disponibilidade</p>
+        <div class="preco">R$&nbsp;R$ 12,99</div>
+        <button class="adicionar" data-id="1">
+            ADICIONAR AO CARRINHO
+        </button>
+    </div>
+
+</article>
+
+
+
+    <article class="produto">
+      <img src="./imagem/magic space corn 50g.jpg" alt="Magic Space Corn 50g" loading="lazy" onerror="this.onerror=null;this.style.display='none'" style="display: none;">
+      <div class="produto-info">
+        <h3>Magic Space Corn 50g</h3><p>Essência — sabor milho</p>
+        <div class="preco">R$&nbsp;15,90</div>
+        <button class="adicionar" data-id="2">ADICIONAR AO CARRINHO</button>
+      </div>
+    </article>
+    <article class="produto">
+      <img src="imagens/magic-purple-passion.jpg" alt="Magic Purple Passion 50g" loading="lazy" onerror="this.onerror=null;this.style.display='none'" style="display: none;">
+      <div class="produto-info">
+        <h3>Magic Purple Passion 50g</h3><p>Essência — linha Magic</p>
+        <div class="preco">R$&nbsp;15,90</div>
+        <button class="adicionar" data-id="3">ADICIONAR AO CARRINHO</button>
+      </div>
+    </article>
+    <article class="produto">
+      <img src="imagens/magic-space-mix.jpg" alt="Magic Space Mix 50g" loading="lazy" onerror="this.onerror=null;this.style.display='none'" style="display: none;">
+      <div class="produto-info">
+        <h3>Magic Space Mix 50g</h3><p>Essência — confirme o sabor</p>
+        <div class="preco">R$&nbsp;15,90</div>
+        <button class="adicionar" data-id="4">ADICIONAR AO CARRINHO</button>
+      </div>
+    </article>
+
+    <article class="produto">
+      <img src="imagens/magic-space-mix.jpg" alt="Magic Space Mix 50g" loading="lazy" onerror="this.onerror=null;this.style.display='none'" style="display: none;">
+      <div class="produto-info">
+        <h3>Magic Space Mix 50g</h3><p>Essência — confirme o sabor</p>
+        <div class="preco">R$&nbsp;15,90</div>
+        <button class="adicionar" data-id="4">ADICIONAR AO CARRINHO</button>
+      </div>
+    </article>
+      
+    </section>
+  </main>
+
+  <footer>
+      <a href="#" class="logo">TABACARIA <span>DO ALEMÃO</span></a>
+
+    <p>Venda de produtos sujeitos às restrições legais de idade.</p>
+    <p>Horario de atendimento <br>8h as 18h <br>Segunda-feira a Sabádo</p>
+    <p>© <span id="ano">2026</span> Tabacaria do Alemão.</p>
+  </footer>
+
+  <div class="fundo-modal" id="fundo-modal"></div>
+  <aside class="carrinho" id="carrinho" aria-label="Carrinho de compras" aria-hidden="true">
+    <div class="carrinho-topo">
+      <h2>Seu carrinho</h2>
+      <button id="fechar-carrinho" aria-label="Fechar carrinho">✕</button>
+    </div>
+    <div class="itens-carrinho" id="itens-carrinho"><p class="vazio">Seu carrinho está vazio.</p></div>
+    <div class="carrinho-rodape">
+      <div class="total"><span>Total</span><strong id="total">R$&nbsp;0,00</strong></div>
+      <button id="finalizar" class="botao-dourado largura-total">FINALIZAR PELO WHATSAPP</button>
+      <small>O pedido será enviado para confirmação.</small>
+    </div>
+  </aside>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
